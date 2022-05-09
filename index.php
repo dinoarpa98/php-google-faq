@@ -34,20 +34,12 @@
 
 
 <div class="container">
-    <?php foreach( $faqs as $Question) { ?>
-
-    <h2><?php echo $Question["question"]; ?></h2>
-    <div>
-        <?php 
-             $edit = explode("/", $Question["answer"]);
-             foreach ($edit as $end) {
-             echo $end . '</br>';
-             }
-         ?>
-        </div>
-
-
-        <?php } ?>
+    <?php foreach( $faqs as $faq) { 
+        
+        echo "<h3>" . $faq['question'] . "</h2>";
+        echo "<p>" . $faq['answer'] . "</p>";
+    }
+        ?>
     </div>
 
 </body>
